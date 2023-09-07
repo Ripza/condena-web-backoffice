@@ -2,7 +2,7 @@ name: Ejecutar script Python cada 2 horas
 
 on:
   schedule:
-    - cron: '0 12,15,18,21,0,2 * * *'
+    - cron: '0 12,19,1,4 * * *'
   workflow_dispatch:
 
 jobs:
