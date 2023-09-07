@@ -20,4 +20,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     - name: Run Python script
+      env: # Or as an environment variable
+        SHEETS_SERVICE_ACCOUNT: ${{ secrets.SHEETS_SERVICE_ACCOUNT }}
+        REPO_GITHUB_TOKEN: ${{ secrets.REPO_GITHUB_TOKEN }}
       run: python replace_from_sheets.py
