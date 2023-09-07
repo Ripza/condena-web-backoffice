@@ -23,4 +23,12 @@ jobs:
       env: # Or as an environment variable
         SHEETS_SERVICE_ACCOUNT: ${{ secrets.SHEETS_SERVICE_ACCOUNT }}
         REPO_GITHUB_TOKEN: ${{ secrets.REPO_GITHUB_TOKEN }}
+        SPREADSHEET_ID: ${{ vars.SPREADSHEET_ID }}
+        SHEET_NAME: ${{ vars.SHEET_NAME }}
+        RANGE_NAME: ${{ vars.RANGE_NAME }}
+        CREDENTIALS_FILE: ${{ vars.CREDENTIALS_FILE }}
+        FILE_NAME: ${{ vars.FILE_NAME }}
+        REPO_PATH: ${{ vars.REPO_PATH }}
+        REPO_BRANCH: ${{ vars.REPO_BRANCH }}
+        REPO_FILE_PATH: ${{ vars.REPO_FILE_PATH }}
       run: python replace_from_sheets.py
